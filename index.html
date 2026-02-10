@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giella - Italienische Handwerkskunst und Sanierung im Taunus. Exklusiver Trockenbau, fugenlose Bäder und Design.">
+    <title>Giella | Italienische Handwerkskunst & Sanierung Taunus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'giella-white': '#fdfcfb',
+                        'giella-dark': '#1c1c1c',
+                        'giella-gold': '#b39359',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fdfcfb; color: #1c1c1c; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-giella-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="leading-none">
+                <span class="text-2xl font-serif font-bold tracking-widest block text-giella-dark">GIELLA</span>
+                <span class="text-[9px] uppercase tracking-[0.4em] text-giella-gold">Art & Restauro</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] text-giella-dark">
+                <a href="#leistungen" class="hover:text-giella-gold transition-colors">Leistungen</a>
+                <a href="#ueber" class="hover:text-giella-gold transition-colors">Über Uns</a>
+                <a href="#kontakt" class="hover:text-giella-gold transition-colors font-bold text-giella-gold">Projekt anfragen</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="hero-giella.jpg" alt="Exklusives Interior Design" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-serif mb-6 leading-tight">Italienische Ästhetik <br><span class="italic font-normal">trifft deutsche Präzision</span></h1>
+            <p class="text-xs md:text-sm font-light tracking-[0.5em] uppercase">Sanierung Taunus • Design • Handwerk</p>
+        </div>
+    </section>
+
+    <!-- Leistungen Grid -->
+    <section id="leistungen" class="py-32 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-serif mb-8 text-giella-dark">Unsere Leistungen</h2>
+                <div class="h-1 w-20 bg-giella-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden mb-6 aspect-[3/4]">
+                        <img src="service-trockenbau.jpg" alt="Exklusiver Trockenbau" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-serif mb-3 text-giella-dark">Kuppeln & Bögen</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">Meisterhafter Trockenbau für anspruchsvolle Architektur. Wir formen Räume neu.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden mb-6 aspect-[3/4]">
+                        <img src="service-design.jpg" alt="Italienische Oberflächen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-serif mb-3 text-giella-dark">Italienische Oberflächen</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">Stucco Veneziano, Kalkputze und Wanddesign mit mediterranem Flair.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden mb-6 aspect-[3/4]">
+                        <img src="service-bad.jpg" alt="Badsanierung" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-serif mb-3 text-giella-dark">Badsanierung</h3>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">Fugenlose Bäder und Komplettsanierung auf höchstem Niveau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="relative">
+                         <div class="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-giella-gold"></div>
+                        <img src="giuseppe-giella.jpg" alt="Giuseppe Giella" class="w-full h-auto object-cover shadow-sm relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-giella-gold"></div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-4xl font-serif mb-6 text-giella-dark">Giuseppe Giella</h2>
+                    <h3 class="text-sm uppercase tracking-[0.3em] text-giella-gold mb-8">Art & Restauro</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        Meine Arbeit verbindet die Tradition italienischer Handwerkskunst mit modernster Bautechnik. 
+                        Aufgewachsen mit der Liebe zu Detail und Ästhetik, bringe ich das Gefühl von zeitloser Eleganz in Ihr Zuhause im Taunus.
+                    </p>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Jedes Projekt ist ein Unikat. Ob die Restaurierung historischer Stuckelemente oder die Gestaltung puristischer, fugenloser Räume – 
+                        mein Anspruch ist Perfektion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-32 bg-giella-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="bg-white p-8 md:p-20 shadow-sm border border-gray-100">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif mb-4 italic text-giella-dark">Kontaktieren Sie uns</h2>
+                    <p class="text-gray-500 font-light tracking-wide uppercase text-xs">Gerne besprechen wir Ihr Vorhaben persönlich.</p>
+                </div>
+
+                <form class="grid md:grid-cols-2 gap-10">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Anrede</label>
+                        <select class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold bg-transparent text-giella-dark">
+                            <option>Herr</option>
+                            <option>Frau</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Ort des Vorhabens</label>
+                        <input type="text" placeholder="z.B. Kronberg" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Vorname</label>
+                        <input type="text" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Nachname</label>
+                        <input type="text" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                    </div>
+                    <div class="space-y-2 text-giella-gold">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">E-Mail</label>
+                        <input type="email" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold font-semibold text-giella-dark">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Telefonnummer</label>
+                        <input type="tel" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Projektbeschreibung</label>
+                        <textarea rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt..." class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="bg-giella-dark text-white w-full py-5 uppercase tracking-[0.3em] text-xs hover:bg-giella-gold transition-all duration-500">Kostenlos anfragen</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-gray-100 bg-white">
+        <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 italic">Giella Handwerkskunst • Sanierung Taunus &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
