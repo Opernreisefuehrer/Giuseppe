@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Impressum | Giella Sanierung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'giella-white': '#fdfcfb',
+                        'giella-dark': '#1c1c1c',
+                        'giella-gold': '#b39359',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fdfcfb; color: #1c1c1c; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-giella-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="leading-none">
+                <a href="index.html" class="block">
+                    <span class="text-2xl font-serif font-bold tracking-widest block text-giella-dark">GIELLA</span>
+                    <span class="text-[9px] uppercase tracking-[0.4em] text-giella-gold">Art & Restauro</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] text-giella-dark">
+                <a href="index.html" class="hover:text-giella-gold transition-colors">Startseite</a>
+                <a href="index.html#kontakt" class="hover:text-giella-gold transition-colors font-bold text-giella-gold">Projekt anfragen</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pt-40 pb-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-serif mb-8 text-giella-dark">Impressum</h1>
+            <div class="h-1 w-20 bg-giella-gold mb-12"></div>
+
+            <div class="prose prose-sm max-w-none text-gray-600">
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">Angaben gemäß § 5 TMG</h2>
+                <p>
+                    Giuseppe Giella<br>
+                    Giella Art & Restauro<br>
+                    [Musterstraße 1]<br>
+                    [12345 Musterstadt]
+                </p>
+
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">Kontakt</h2>
+                <p>
+                    Telefon: [Telefonnummer]<br>
+                    E-Mail: [E-Mail-Adresse]
+                </p>
+
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">Umsatzsteuer-ID</h2>
+                <p>
+                    Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                    [DE123456789]
+                </p>
+
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">Redaktionell verantwortlich</h2>
+                <p>
+                    Giuseppe Giella<br>
+                    [Adresse wie oben]
+                </p>
+
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">EU-Streitschlichtung</h2>
+                <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-giella-gold hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+                <h2 class="text-xl font-bold text-giella-dark mb-4 mt-8">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+                <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-gray-100 bg-white">
+        <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 italic mb-6">Giella Handwerkskunst • Sanierung Taunus &copy; 2026</p>
+        <div class="flex justify-center space-x-8 text-[10px] uppercase tracking-[0.2em] text-giella-dark">
+            <a href="impressum.html" class="hover:text-giella-gold transition-colors font-bold">Impressum</a>
+            <a href="datenschutz.html" class="hover:text-giella-gold transition-colors">Datenschutz</a>
+        </div>
+    </footer>
+
+</body>
+</html>
