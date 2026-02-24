@@ -138,42 +138,62 @@
                     <p class="text-gray-500 font-light tracking-wide uppercase text-xs">Gerne besprechen wir Ihr Vorhaben persönlich.</p>
                 </div>
 
-                <form class="grid md:grid-cols-2 gap-10">
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Anrede</label>
-                        <select class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold bg-transparent text-giella-dark">
-                            <option>Herr</option>
-                            <option>Frau</option>
-                        </select>
+                <!-- Formular Container -->
+                <div id="form-container">
+                    <form id="contact-form" action="https://formspree.io/f/mrearlro" method="POST" enctype="multipart/form-data" class="grid md:grid-cols-2 gap-10">
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Anrede</label>
+                            <select name="anrede" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold bg-transparent text-giella-dark">
+                                <option>Herr</option>
+                                <option>Frau</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Ort des Vorhabens</label>
+                            <input type="text" name="ort" placeholder="z.B. Kronberg" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Vorname</label>
+                            <input type="text" name="vorname" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Nachname</label>
+                            <input type="text" name="nachname" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark" required>
+                        </div>
+                        <div class="space-y-2 text-giella-gold">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">E-Mail</label>
+                            <input type="email" name="email" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold font-semibold text-giella-dark" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Telefonnummer</label>
+                            <input type="tel" name="telefon" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
+                        </div>
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Projektbeschreibung</label>
+                            <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt..." class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark" required></textarea>
+                        </div>
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Datei-Anhang (Optional)</label>
+                            <input type="file" name="upload" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[10px] file:uppercase file:bg-giella-gold file:text-white hover:file:bg-giella-dark transition-colors cursor-pointer">
+                        </div>
+                        <div class="md:col-span-2">
+                            <button id="submit-btn" type="submit" class="bg-giella-dark text-white w-full py-5 uppercase tracking-[0.3em] text-xs hover:bg-giella-gold transition-all duration-500">Kostenlos anfragen</button>
+                            <p id="form-status" class="text-xs text-red-500 mt-2 text-center hidden"></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Erfolgsnachricht (Initial versteckt) -->
+                <div id="success-message" class="hidden text-center py-10 bg-gray-50 border border-giella-gold/20 p-8 shadow-sm">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-giella-gold/10 text-giella-gold mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
                     </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Ort des Vorhabens</label>
-                        <input type="text" placeholder="z.B. Kronberg" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Vorname</label>
-                        <input type="text" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Nachname</label>
-                        <input type="text" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
-                    </div>
-                    <div class="space-y-2 text-giella-gold">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">E-Mail</label>
-                        <input type="email" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold font-semibold text-giella-dark">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Telefonnummer</label>
-                        <input type="tel" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark">
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <label class="text-[10px] uppercase tracking-widest text-gray-400">Projektbeschreibung</label>
-                        <textarea rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt..." class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark"></textarea>
-                    </div>
-                    <div class="md:col-span-2">
-                        <button type="submit" class="bg-giella-dark text-white w-full py-5 uppercase tracking-[0.3em] text-xs hover:bg-giella-gold transition-all duration-500">Kostenlos anfragen</button>
-                    </div>
-                </form>
+                    <h3 class="text-2xl font-serif text-giella-dark mb-4">Vielen Dank!</h3>
+                    <p class="text-gray-600 font-light mb-6">Wir haben Ihre Anfrage erhalten. Giuseppe Giella wird sich zeitnah bei Ihnen melden.</p>
+                    <button onclick="location.reload()" class="text-[10px] uppercase tracking-widest text-giella-gold hover:text-giella-dark underline cursor-pointer">Weitere Anfrage senden</button>
+                </div>
             </div>
         </div>
     </section>
@@ -186,5 +206,62 @@
         </div>
     </footer>
 
+    <!-- Script für Formularversand ohne Reload -->
+    <script>
+        var form = document.getElementById("contact-form");
+        var formContainer = document.getElementById("form-container");
+        var successMessage = document.getElementById("success-message");
+        var status = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            var btn = document.getElementById("submit-btn");
+            var originalBtnText = btn.innerText;
+            
+            // Button Ladezustand
+            btn.disabled = true;
+            btn.innerText = "Senden...";
+            btn.classList.add("opacity-50", "cursor-not-allowed");
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Erfolg: Formular ausblenden, Nachricht einblenden
+                    formContainer.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerText = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerText = "Oops! Da ist etwas schiefgelaufen.";
+                        }
+                        status.classList.remove('hidden');
+                        
+                        // Button zurücksetzen
+                        btn.disabled = false;
+                        btn.innerText = originalBtnText;
+                        btn.classList.remove("opacity-50", "cursor-not-allowed");
+                    })
+                }
+            }).catch(error => {
+                status.innerText = "Oops! Es gab ein Problem beim Senden.";
+                status.classList.remove('hidden');
+                
+                // Button zurücksetzen
+                btn.disabled = false;
+                btn.innerText = originalBtnText;
+                btn.classList.remove("opacity-50", "cursor-not-allowed");
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>
