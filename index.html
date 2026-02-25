@@ -140,7 +140,7 @@
 
                 <!-- Formular Container -->
                 <div id="form-container">
-                    <form id="contact-form" action="https://formspree.io/f/mrearlro" method="POST" enctype="multipart/form-data" class="grid md:grid-cols-2 gap-10">
+                    <form id="contact-form" action="https://formspree.io/f/mrearlro" method="POST" class="grid md:grid-cols-2 gap-10">
                         <div class="space-y-2">
                             <label class="text-[10px] uppercase tracking-widest text-gray-400">Anrede</label>
                             <select name="anrede" class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold bg-transparent text-giella-dark">
@@ -171,10 +171,6 @@
                         <div class="md:col-span-2 space-y-2">
                             <label class="text-[10px] uppercase tracking-widest text-gray-400">Projektbeschreibung</label>
                             <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt..." class="w-full border-b border-gray-200 py-3 focus:outline-none focus:border-giella-gold text-giella-dark" required></textarea>
-                        </div>
-                        <div class="md:col-span-2 space-y-2">
-                            <label class="text-[10px] uppercase tracking-widest text-gray-400">Datei-Anhang (Optional)</label>
-                            <input type="file" name="upload" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[10px] file:uppercase file:bg-giella-gold file:text-white hover:file:bg-giella-dark transition-colors cursor-pointer">
                         </div>
                         <div class="md:col-span-2">
                             <button id="submit-btn" type="submit" class="bg-giella-dark text-white w-full py-5 uppercase tracking-[0.3em] text-xs hover:bg-giella-gold transition-all duration-500">Kostenlos anfragen</button>
