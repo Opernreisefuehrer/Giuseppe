@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npx tailwindcss -i input.css -o css/style.css",
+  "outputDirectory": ".",
+  "installCommand": "npm install"
+}
